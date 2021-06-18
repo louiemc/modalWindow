@@ -21,5 +21,6 @@ for (let i = 0; i < btnsShowModal.length; i++) {
 
     // display the modal, which is in the html -- it has the hidden class NEED TO REMOVE THE HIDDEN CLASS --> use the .remove method
     modal.classList.remove("hidden");
+    overlay.classList.remove("hidden");
   });
 }
