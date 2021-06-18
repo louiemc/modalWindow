@@ -17,6 +17,6 @@ for (let i = 0; i < btnsShowModal.length; i++) {
 
   // react to a click event on each button
   btnsShowModal[i].addEventListener("click", function () {
-    console.log(btnsShowModal[i].textContent);
+    console.log(`${btnsShowModal[i].textContent} was clicked`); // test to log to the console the button that was clicked
   });
 }
