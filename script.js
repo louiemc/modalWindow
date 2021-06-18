@@ -58,5 +58,13 @@ function closeModal() {
 // listening for keyboard events - escape key
 // for global events, like keyboard events, listen on the whole document
 document.addEventListener("keydown", function (e) {
-  console.log("A key was pressed", e);
+  // console.log("A key was pressed", e);
+  // console.log(e.key);
+
+  if (e.key === "Escape") {
+    // console.log("Esc was pressed");
+    if (!modal.classList.contains("hidden")) {
+      closeModal();
+    }
+  }
 });
