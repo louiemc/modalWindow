@@ -12,5 +12,11 @@ console.log(btnsShowModal);
 
 // loop through the NodeList and doo something with the show modal btns
 for (let i = 0; i < btnsShowModal.length; i++) {
+  console.log(btnsShowModal[i]);
   console.log(btnsShowModal[i].textContent);
+
+  // react to a click event on each button
+  btnsShowModal[i].addEventListener("click", function () {
+    console.log(btnsShowModal[i].textContent);
+  });
 }
