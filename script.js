@@ -25,17 +25,23 @@ for (let i = 0; i < btnsShowModal.length; i++) {
   });
 }
 // hiding/closing the modal - add evetn listener to close modal button
-btnCloseModal.addEventListener("click", function () {
-  modal.classList.add("hidden");
-  overlay.classList.add("hidden");
-});
+// btnCloseModal.addEventListener("click", function () {
+//   modal.classList.add("hidden");
+//   overlay.classList.add("hidden");
+// });
 
-overlay.addEventListener("click", function () {
-  modal.classList.add("hidden");
-  overlay.classList.add("hidden");
-});
+// DRY version of code above - not calling the closeModal function because if it has the () then once the page is loaded the function will be invoked - DON'T WANT THAT. It will run once clicked
+btnCloseModal.addEventListener("click", closeModal);
 
-// no repeating code in the btncloseModal and overlay
+// overlay.addEventListener("click", function () {
+//   modal.classList.add("hidden");
+//   overlay.classList.add("hidden");
+// });
+
+// DRY version of code above - not calling the closeModal function because if it has the () then once the page is loaded the function will be invoked - DON'T WANT THAT. It will run once clicked
+overlay.addEventListener("click", closeModal);
+
+// no repeating code in the btncloseModal and overlay event handler functions
 function closeModal() {
   modal.classList.add("hidden");
   overlay.classList.add("hidden");
