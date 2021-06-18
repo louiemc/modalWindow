@@ -61,10 +61,14 @@ document.addEventListener("keydown", function (e) {
   // console.log("A key was pressed", e);
   // console.log(e.key);
 
-  if (e.key === "Escape") {
-    // console.log("Esc was pressed");
-    if (!modal.classList.contains("hidden")) {
-      closeModal();
-    }
+  // if (e.key === "Escape") {
+  //   // console.log("Esc was pressed");
+  //   if (!modal.classList.contains("hidden")) {
+  //     closeModal();
+  //   }
+  // }
+
+  if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+    closeModal();
   }
 });
