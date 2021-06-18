@@ -34,3 +34,9 @@ overlay.addEventListener("click", function () {
   modal.classList.add("hidden");
   overlay.classList.add("hidden");
 });
+
+// no repeating code in the btncloseModal and overlay
+function closeModal() {
+  modal.classList.add("hidden");
+  overlay.classList.add("hidden");
+}
