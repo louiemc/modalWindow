@@ -12,8 +12,8 @@ const btnsShowModal = document.querySelectorAll(".show-modal"); // this gives us
 
 // loop through the NodeList and doo something with the show modal btns
 for (let i = 0; i < btnsShowModal.length; i++) {
-  console.log(btnsShowModal[i]);
-  console.log(btnsShowModal[i].textContent);
+  // console.log(btnsShowModal[i]);
+  // console.log(btnsShowModal[i].textContent);
 
   // react to a click event on each button
   // btnsShowModal[i].addEventListener("click", function () {
@@ -54,3 +54,9 @@ function closeModal() {
   modal.classList.add("hidden");
   overlay.classList.add("hidden");
 }
+
+// listening for keyboard events - escape key
+// for global events, like keyboard events, listen on the whole document
+document.addEventListener("keydown", function () {
+  console.log("A key was pressed");
+});
