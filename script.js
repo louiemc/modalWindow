@@ -8,7 +8,7 @@ const overlay = document.querySelector(".overlay");
 const btnsShowModal = document.querySelectorAll(".show-modal"); // this gives us a NodeList
 
 // you'll see the NodeList - not an array! (can loop through it)
-console.log(btnsShowModal);
+// console.log(btnsShowModal);
 
 // loop through the NodeList and doo something with the show modal btns
 for (let i = 0; i < btnsShowModal.length; i++) {
@@ -16,14 +16,22 @@ for (let i = 0; i < btnsShowModal.length; i++) {
   console.log(btnsShowModal[i].textContent);
 
   // react to a click event on each button
-  btnsShowModal[i].addEventListener("click", function () {
-    console.log(`${btnsShowModal[i].textContent} was clicked`); // test to log to the console the button that was clicked
+  // btnsShowModal[i].addEventListener("click", function () {
+  //   console.log(`${btnsShowModal[i].textContent} was clicked`); // test to log to the console the button that was clicked
 
-    // display the modal, which is in the html -- it has the hidden class NEED TO REMOVE THE HIDDEN CLASS --> use the .remove method
-    modal.classList.remove("hidden");
-    overlay.classList.remove("hidden");
-  });
+  //   // display the modal, which is in the html -- it has the hidden class NEED TO REMOVE THE HIDDEN CLASS --> use the .remove method
+  //   modal.classList.remove("hidden");
+  //   overlay.classList.remove("hidden");
+  // });
+
+  btnsShowModal[i].addEventListener("click", openModal);
 }
+// make for loop of showing the modal into a fu
+function openModal() {
+  modal.classList.remove("hidden");
+  overlay.classList.remove("hidden");
+}
+
 // hiding/closing the modal - add evetn listener to close modal button
 // btnCloseModal.addEventListener("click", function () {
 //   modal.classList.add("hidden");
